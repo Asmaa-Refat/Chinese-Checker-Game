@@ -101,14 +101,14 @@ public class Game
         {
             for (int j = 0; j < marbles.get(i).possibleMoves.size(); j++)
             {
-                char [][] tempStar = move(state.star , marbles.get(i).currentPositionY , marbles.get(i).currentPositionX , marbles.get(i).possibleMoves.get(j));
+                char [][] tempStar = move(state.star, marbles.get(i).currentPositionY, marbles.get(i).currentPositionX, marbles.get(i).possibleMoves.get(j));
                 State state1 = new State(tempStar);
                 children.add(state1);
             }
 
             for (int j = 0; j < marbles.get(i).possibleHops.size(); j++)
             {
-                char [][] tempStar = move(state.star , marbles.get(i).currentPositionY , marbles.get(i).currentPositionX , marbles.get(i).possibleHops.get(j));
+                char [][] tempStar = move(state.star, marbles.get(i).currentPositionY, marbles.get(i).currentPositionX, marbles.get(i).possibleHops.get(j));
                 State state1 = new State(tempStar);
                 children.add(state1);
             }
@@ -234,7 +234,6 @@ public class Game
             }
             return alphaValue;
         }
-
     }
 
     public void clearTree()
@@ -292,7 +291,7 @@ public class Game
                     {
                         if (marble.possibleMoves.size() != 0 && marble.possibleHops.size() != 0)
                         {
-                            System.out.println("Possible Moves");
+                            System.out.println("Possible Moves:");
                             for(int row = 0; row < marble.possibleMoves.size(); row ++)
                             {
                                 System.out.println("(" + marble.possibleMoves.get(row).getKey() + " , " + marble.possibleMoves.get(row).getValue() + ")");
@@ -300,7 +299,7 @@ public class Game
 
                             System.out.println();
 
-                            System.out.println("Possible Hopes");
+                            System.out.println("Possible Hops:");
                             for(int row = 0; row < marble.possibleHops.size(); row ++)
                             {
                                 System.out.println("(" + marble.possibleHops.get(row).getKey() + " , " + marble.possibleHops.get(row).getValue() + ")");
@@ -310,11 +309,11 @@ public class Game
 
                         else if (marble.possibleMoves.size() == 0 && marble.possibleHops.size() != 0)
                         {
-                            System.out.println("No Possible Moves");
+                            System.out.println("No Possible Moves!");
 
                             System.out.println();
 
-                            System.out.println("Possible Hopes");
+                            System.out.println("Possible Hops:");
                             for(int row = 0; row < marble.possibleHops.size(); row ++)
                             {
                                 System.out.println("(" + marble.possibleHops.get(row).getKey() + " , " + marble.possibleHops.get(row).getValue() + ")");
@@ -324,7 +323,7 @@ public class Game
 
                         else if (marble.possibleMoves.size() != 0 && marble.possibleHops.size() == 0)
                         {
-                            System.out.println("Possible Moves");
+                            System.out.println("Possible Moves:");
                             for(int row = 0; row < marble.possibleMoves.size(); row ++)
                             {
                                 System.out.println("(" + marble.possibleMoves.get(row).getKey() + " , " + marble.possibleMoves.get(row).getValue() + ")");
@@ -332,26 +331,25 @@ public class Game
 
                             System.out.println();
 
-                            System.out.println("No Possible Hopes");
+                            System.out.println("No Possible Hops!");
                             check = true;
                         }
-
                         else
                         {
-                            System.out.println("No Possible Moves");
-                            System.out.println("No Possible Hopes");
+                            System.out.println("No Possible Moves!");
+                            System.out.println("No Possible Hops!");
                             check = false;
                         }
-
                         break;
                     }
-
+                    
                     else
                     {
                         check = false;
                     }
                     num ++;
                 }
+                
                 if (check)
                 {
                     while(true)
@@ -380,8 +378,8 @@ public class Game
                 }
                 else
                 {
-                    System.out.println("Invalid indices for marble!!");
-                    System.out.println("Please Try Again");
+                    System.out.println("Invalid indices for marble!");
+                    System.out.println("Please Try Again!");
                 }
             }
         }
@@ -409,7 +407,7 @@ public class Game
             level = 3;
 
         else
-            System.out.println("Invalid choice");
+            System.out.println("Invalid choice!");
 
 
         if (choice == 1 || choice == 2 || choice == 3)
@@ -422,7 +420,7 @@ public class Game
                 if (checkForWinner(newState) == 1)
                 {
                     System.out.println("Computer Wins The Game!");
-                    System.out.println("Better Luck Next Time");
+                    System.out.println("Better Luck Next Time!");
                     break;
                 }
                 System.out.println("ComputerScore  " + computerScore);
