@@ -19,11 +19,11 @@ When any marble enter the opponent triangle, its distance is set to Zero.
 ---------------------------------------------------------------------
 
 This Assignment was a group of 4.
-My Lovely Team:- Nada Omar, Fayza Ahmed, Yomna Mahmoud.
-We started working on it on 29/5 (Sunday).
-We finished it on 4/6 (Saturday). 
-So 7 days in a row!
-AI Course.
-Third Year.
+- My Lovely Team:- Nada Omar, Fayza Ahmed, Yomna Mahmoud.
+- We started working on it on 29/5 (Sunday).
+- We finished it on 4/6 (Saturday). 
+- So 7 days in a row!
+- AI Course.
+- Third Year.
 
 
